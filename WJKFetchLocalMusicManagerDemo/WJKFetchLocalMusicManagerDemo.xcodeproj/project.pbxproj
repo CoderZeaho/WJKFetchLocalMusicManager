@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		FA0AA081202ED2BC008E98AE /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA080202ED2BC008E98AE /* TableViewCell.m */; };
 		FA0AA085202ED314008E98AE /* WJKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */; };
+		FA0AA08B2031D884008E98AE /* WJKLocalMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA0892031D884008E98AE /* WJKLocalMusicModel.m */; };
+		FA0AA08C2031D884008E98AE /* WJKFetchLocalMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA08A2031D884008E98AE /* WJKFetchLocalMusicManager.m */; };
 		FACF6017202E93DF00AB41DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6016202E93DF00AB41DC /* AppDelegate.m */; };
 		FACF601A202E93DF00AB41DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6019202E93DF00AB41DC /* ViewController.m */; };
 		FACF601D202E93DF00AB41DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF601B202E93DF00AB41DC /* Main.storyboard */; };
 		FACF601F202E93DF00AB41DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACF601E202E93DF00AB41DC /* Assets.xcassets */; };
 		FACF6025202E93DF00AB41DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6024202E93DF00AB41DC /* main.m */; };
 		FACF6048202E940A00AB41DC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF6047202E940A00AB41DC /* Launch Screen.storyboard */; };
-		FACF604C202E959B00AB41DC /* WJKFetchLocalMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF604B202E959B00AB41DC /* WJKFetchLocalMusicManager.m */; };
-		FACF604F202E9E2900AB41DC /* WJKLocalMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF604E202E9E2900AB41DC /* WJKLocalMusicModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,10 @@
 		FA0AA080202ED2BC008E98AE /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKAudioPlayer.m; sourceTree = "<group>"; };
 		FA0AA084202ED314008E98AE /* WJKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKAudioPlayer.h; sourceTree = "<group>"; };
+		FA0AA0872031D884008E98AE /* WJKLocalMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKLocalMusicModel.h; sourceTree = "<group>"; };
+		FA0AA0882031D884008E98AE /* WJKFetchLocalMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKFetchLocalMusicManager.h; sourceTree = "<group>"; };
+		FA0AA0892031D884008E98AE /* WJKLocalMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKLocalMusicModel.m; sourceTree = "<group>"; };
+		FA0AA08A2031D884008E98AE /* WJKFetchLocalMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKFetchLocalMusicManager.m; sourceTree = "<group>"; };
 		FACF6012202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF6015202E93DF00AB41DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FACF6016202E93DF00AB41DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,10 +57,6 @@
 		FACF602A202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF6035202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF6047202E940A00AB41DC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		FACF604A202E959B00AB41DC /* WJKFetchLocalMusicManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJKFetchLocalMusicManager.h; sourceTree = "<group>"; };
-		FACF604B202E959B00AB41DC /* WJKFetchLocalMusicManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJKFetchLocalMusicManager.m; sourceTree = "<group>"; };
-		FACF604D202E9E2900AB41DC /* WJKLocalMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJKLocalMusicModel.h; sourceTree = "<group>"; };
-		FACF604E202E9E2900AB41DC /* WJKLocalMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJKLocalMusicModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +93,18 @@
 			path = WJKAudioPlayer;
 			sourceTree = "<group>";
 		};
+		FA0AA0862031D884008E98AE /* WJKFetchLocalMusicManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA0AA0872031D884008E98AE /* WJKLocalMusicModel.h */,
+				FA0AA0882031D884008E98AE /* WJKFetchLocalMusicManager.h */,
+				FA0AA0892031D884008E98AE /* WJKLocalMusicModel.m */,
+				FA0AA08A2031D884008E98AE /* WJKFetchLocalMusicManager.m */,
+			);
+			name = WJKFetchLocalMusicManager;
+			path = ../../WJKFetchLocalMusicManager;
+			sourceTree = "<group>";
+		};
 		FACF6009202E93DF00AB41DC = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +126,8 @@
 		FACF6014202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FA0AA0862031D884008E98AE /* WJKFetchLocalMusicManager */,
 				FA0AA082202ED314008E98AE /* WJKAudioPlayer */,
-				FACF6049202E94A500AB41DC /* WJKFetchLocalMusicManager */,
 				FACF6015202E93DF00AB41DC /* AppDelegate.h */,
 				FACF6016202E93DF00AB41DC /* AppDelegate.m */,
 				FACF6018202E93DF00AB41DC /* ViewController.h */,
@@ -129,17 +141,6 @@
 				FACF6024202E93DF00AB41DC /* main.m */,
 			);
 			path = WJKFetchLocalMusicManagerDemo;
-			sourceTree = "<group>";
-		};
-		FACF6049202E94A500AB41DC /* WJKFetchLocalMusicManager */ = {
-			isa = PBXGroup;
-			children = (
-				FACF604A202E959B00AB41DC /* WJKFetchLocalMusicManager.h */,
-				FACF604B202E959B00AB41DC /* WJKFetchLocalMusicManager.m */,
-				FACF604D202E9E2900AB41DC /* WJKLocalMusicModel.h */,
-				FACF604E202E9E2900AB41DC /* WJKLocalMusicModel.m */,
-			);
-			path = WJKFetchLocalMusicManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,10 +279,10 @@
 				FACF601A202E93DF00AB41DC /* ViewController.m in Sources */,
 				FA0AA081202ED2BC008E98AE /* TableViewCell.m in Sources */,
 				FA0AA085202ED314008E98AE /* WJKAudioPlayer.m in Sources */,
-				FACF604F202E9E2900AB41DC /* WJKLocalMusicModel.m in Sources */,
 				FACF6025202E93DF00AB41DC /* main.m in Sources */,
+				FA0AA08C2031D884008E98AE /* WJKFetchLocalMusicManager.m in Sources */,
+				FA0AA08B2031D884008E98AE /* WJKLocalMusicModel.m in Sources */,
 				FACF6017202E93DF00AB41DC /* AppDelegate.m in Sources */,
-				FACF604C202E959B00AB41DC /* WJKFetchLocalMusicManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
