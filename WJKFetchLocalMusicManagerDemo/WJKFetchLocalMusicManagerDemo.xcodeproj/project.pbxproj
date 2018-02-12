@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA0AA081202ED2BC008E98AE /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA080202ED2BC008E98AE /* TableViewCell.m */; };
+		FA0AA085202ED314008E98AE /* WJKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */; };
+		FACF6017202E93DF00AB41DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6016202E93DF00AB41DC /* AppDelegate.m */; };
+		FACF601A202E93DF00AB41DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6019202E93DF00AB41DC /* ViewController.m */; };
+		FACF601D202E93DF00AB41DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF601B202E93DF00AB41DC /* Main.storyboard */; };
+		FACF601F202E93DF00AB41DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACF601E202E93DF00AB41DC /* Assets.xcassets */; };
+		FACF6025202E93DF00AB41DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6024202E93DF00AB41DC /* main.m */; };
+		FACF6048202E940A00AB41DC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF6047202E940A00AB41DC /* Launch Screen.storyboard */; };
+		FACF604C202E959B00AB41DC /* WJKFetchLocalMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF604B202E959B00AB41DC /* WJKFetchLocalMusicManager.m */; };
+		FACF604F202E9E2900AB41DC /* WJKLocalMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF604E202E9E2900AB41DC /* WJKLocalMusicModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FACF602B202E93DF00AB41DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACF600A202E93DF00AB41DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACF6011202E93DF00AB41DC;
+			remoteInfo = WJKFetchLocalMusicManagerDemo;
+		};
+		FACF6036202E93DF00AB41DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACF600A202E93DF00AB41DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACF6011202E93DF00AB41DC;
+			remoteInfo = WJKFetchLocalMusicManagerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA0AA07F202ED2BC008E98AE /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		FA0AA080202ED2BC008E98AE /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKAudioPlayer.m; sourceTree = "<group>"; };
+		FA0AA084202ED314008E98AE /* WJKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKAudioPlayer.h; sourceTree = "<group>"; };
+		FACF6012202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACF6015202E93DF00AB41DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FACF6016202E93DF00AB41DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FACF6018202E93DF00AB41DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FACF6019202E93DF00AB41DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FACF601C202E93DF00AB41DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FACF601E202E93DF00AB41DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACF6023202E93DF00AB41DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACF6024202E93DF00AB41DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FACF602A202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACF6035202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACF6047202E940A00AB41DC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FACF604A202E959B00AB41DC /* WJKFetchLocalMusicManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJKFetchLocalMusicManager.h; sourceTree = "<group>"; };
+		FACF604B202E959B00AB41DC /* WJKFetchLocalMusicManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJKFetchLocalMusicManager.m; sourceTree = "<group>"; };
+		FACF604D202E9E2900AB41DC /* WJKLocalMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJKLocalMusicModel.h; sourceTree = "<group>"; };
+		FACF604E202E9E2900AB41DC /* WJKLocalMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJKLocalMusicModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACF600F202E93DF00AB41DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACF6027202E93DF00AB41DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACF6032202E93DF00AB41DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA0AA082202ED314008E98AE /* WJKAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FA0AA084202ED314008E98AE /* WJKAudioPlayer.h */,
+				FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */,
+			);
+			path = WJKAudioPlayer;
+			sourceTree = "<group>";
+		};
+		FACF6009202E93DF00AB41DC = {
+			isa = PBXGroup;
+			children = (
+				FACF6014202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */,
+				FACF6013202E93DF00AB41DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACF6013202E93DF00AB41DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACF6012202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo.app */,
+				FACF602A202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoTests.xctest */,
+				FACF6035202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACF6014202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FA0AA082202ED314008E98AE /* WJKAudioPlayer */,
+				FACF6049202E94A500AB41DC /* WJKFetchLocalMusicManager */,
+				FACF6015202E93DF00AB41DC /* AppDelegate.h */,
+				FACF6016202E93DF00AB41DC /* AppDelegate.m */,
+				FACF6018202E93DF00AB41DC /* ViewController.h */,
+				FACF6019202E93DF00AB41DC /* ViewController.m */,
+				FA0AA07F202ED2BC008E98AE /* TableViewCell.h */,
+				FA0AA080202ED2BC008E98AE /* TableViewCell.m */,
+				FACF6047202E940A00AB41DC /* Launch Screen.storyboard */,
+				FACF601B202E93DF00AB41DC /* Main.storyboard */,
+				FACF601E202E93DF00AB41DC /* Assets.xcassets */,
+				FACF6023202E93DF00AB41DC /* Info.plist */,
+				FACF6024202E93DF00AB41DC /* main.m */,
+			);
+			path = WJKFetchLocalMusicManagerDemo;
+			sourceTree = "<group>";
+		};
+		FACF6049202E94A500AB41DC /* WJKFetchLocalMusicManager */ = {
+			isa = PBXGroup;
+			children = (
+				FACF604A202E959B00AB41DC /* WJKFetchLocalMusicManager.h */,
+				FACF604B202E959B00AB41DC /* WJKFetchLocalMusicManager.m */,
+				FACF604D202E9E2900AB41DC /* WJKLocalMusicModel.h */,
+				FACF604E202E9E2900AB41DC /* WJKLocalMusicModel.m */,
+			);
+			path = WJKFetchLocalMusicManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACF6011202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACF603E202E93DF00AB41DC /* Build configuration list for PBXNativeTarget "WJKFetchLocalMusicManagerDemo" */;
+			buildPhases = (
+				FACF600E202E93DF00AB41DC /* Sources */,
+				FACF600F202E93DF00AB41DC /* Frameworks */,
+				FACF6010202E93DF00AB41DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WJKFetchLocalMusicManagerDemo;
+			productName = WJKFetchLocalMusicManagerDemo;
+			productReference = FACF6012202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FACF6029202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACF6041202E93DF00AB41DC /* Build configuration list for PBXNativeTarget "WJKFetchLocalMusicManagerDemoTests" */;
+			buildPhases = (
+				FACF6026202E93DF00AB41DC /* Sources */,
+				FACF6027202E93DF00AB41DC /* Frameworks */,
+				FACF6028202E93DF00AB41DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACF602C202E93DF00AB41DC /* PBXTargetDependency */,
+			);
+			name = WJKFetchLocalMusicManagerDemoTests;
+			productName = WJKFetchLocalMusicManagerDemoTests;
+			productReference = FACF602A202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FACF6034202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACF6044202E93DF00AB41DC /* Build configuration list for PBXNativeTarget "WJKFetchLocalMusicManagerDemoUITests" */;
+			buildPhases = (
+				FACF6031202E93DF00AB41DC /* Sources */,
+				FACF6032202E93DF00AB41DC /* Frameworks */,
+				FACF6033202E93DF00AB41DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACF6037202E93DF00AB41DC /* PBXTargetDependency */,
+			);
+			name = WJKFetchLocalMusicManagerDemoUITests;
+			productName = WJKFetchLocalMusicManagerDemoUITests;
+			productReference = FACF6035202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACF600A202E93DF00AB41DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Zeaho;
+				TargetAttributes = {
+					FACF6011202E93DF00AB41DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FACF6029202E93DF00AB41DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FACF6011202E93DF00AB41DC;
+					};
+					FACF6034202E93DF00AB41DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FACF6011202E93DF00AB41DC;
+					};
+				};
+			};
+			buildConfigurationList = FACF600D202E93DF00AB41DC /* Build configuration list for PBXProject "WJKFetchLocalMusicManagerDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FACF6009202E93DF00AB41DC;
+			productRefGroup = FACF6013202E93DF00AB41DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACF6011202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */,
+				FACF6029202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoTests */,
+				FACF6034202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACF6010202E93DF00AB41DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACF6048202E940A00AB41DC /* Launch Screen.storyboard in Resources */,
+				FACF601F202E93DF00AB41DC /* Assets.xcassets in Resources */,
+				FACF601D202E93DF00AB41DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACF6028202E93DF00AB41DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACF6033202E93DF00AB41DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACF600E202E93DF00AB41DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACF601A202E93DF00AB41DC /* ViewController.m in Sources */,
+				FA0AA081202ED2BC008E98AE /* TableViewCell.m in Sources */,
+				FA0AA085202ED314008E98AE /* WJKAudioPlayer.m in Sources */,
+				FACF604F202E9E2900AB41DC /* WJKLocalMusicModel.m in Sources */,
+				FACF6025202E93DF00AB41DC /* main.m in Sources */,
+				FACF6017202E93DF00AB41DC /* AppDelegate.m in Sources */,
+				FACF604C202E959B00AB41DC /* WJKFetchLocalMusicManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACF6026202E93DF00AB41DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACF6031202E93DF00AB41DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FACF602C202E93DF00AB41DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACF6011202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */;
+			targetProxy = FACF602B202E93DF00AB41DC /* PBXContainerItemProxy */;
+		};
+		FACF6037202E93DF00AB41DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACF6011202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo */;
+			targetProxy = FACF6036202E93DF00AB41DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FACF601B202E93DF00AB41DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACF601C202E93DF00AB41DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACF603C202E93DF00AB41DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FACF603D202E93DF00AB41DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FACF603F202E93DF00AB41DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
+				INFOPLIST_FILE = WJKFetchLocalMusicManagerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nedu.WJKFetchLocalMusicManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FACF6040202E93DF00AB41DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
+				INFOPLIST_FILE = WJKFetchLocalMusicManagerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nedu.WJKFetchLocalMusicManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FACF6042202E93DF00AB41DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
+				INFOPLIST_FILE = WJKFetchLocalMusicManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nedu.WJKFetchLocalMusicManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WJKFetchLocalMusicManagerDemo.app/WJKFetchLocalMusicManagerDemo";
+			};
+			name = Debug;
+		};
+		FACF6043202E93DF00AB41DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
+				INFOPLIST_FILE = WJKFetchLocalMusicManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nedu.WJKFetchLocalMusicManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WJKFetchLocalMusicManagerDemo.app/WJKFetchLocalMusicManagerDemo";
+			};
+			name = Release;
+		};
+		FACF6045202E93DF00AB41DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
+				INFOPLIST_FILE = WJKFetchLocalMusicManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nedu.WJKFetchLocalMusicManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WJKFetchLocalMusicManagerDemo;
+			};
+			name = Debug;
+		};
+		FACF6046202E93DF00AB41DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
+				INFOPLIST_FILE = WJKFetchLocalMusicManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nedu.WJKFetchLocalMusicManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WJKFetchLocalMusicManagerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACF600D202E93DF00AB41DC /* Build configuration list for PBXProject "WJKFetchLocalMusicManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF603C202E93DF00AB41DC /* Debug */,
+				FACF603D202E93DF00AB41DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACF603E202E93DF00AB41DC /* Build configuration list for PBXNativeTarget "WJKFetchLocalMusicManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF603F202E93DF00AB41DC /* Debug */,
+				FACF6040202E93DF00AB41DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACF6041202E93DF00AB41DC /* Build configuration list for PBXNativeTarget "WJKFetchLocalMusicManagerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF6042202E93DF00AB41DC /* Debug */,
+				FACF6043202E93DF00AB41DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACF6044202E93DF00AB41DC /* Build configuration list for PBXNativeTarget "WJKFetchLocalMusicManagerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF6045202E93DF00AB41DC /* Debug */,
+				FACF6046202E93DF00AB41DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FACF600A202E93DF00AB41DC /* Project object */;
+}
