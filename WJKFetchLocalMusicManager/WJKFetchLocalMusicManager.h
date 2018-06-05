@@ -7,16 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MediaPlayer/MediaPlayer.h>
-#import <AssetsLibrary/AssetsLibrary.h>
-#import <CoreMedia/CoreMedia.h>
 #import <AVFoundation/AVFoundation.h>
-#import "WJKLocalMusicModel.h"
+
+#define WJKFetchLocalMusicErrorDomain @"WJKFetchLocalMusicErrorDomain"
+
+#define WJKUnknownError @"WJKUnknownError"
+#define WJKFileExistsError @"WJKFileExistsError"
+
+#define kWJKUnknownError -65536
+#define kWJKFileExistsError -48
 
 @interface WJKFetchLocalMusicManager : NSObject
 
 + (WJKFetchLocalMusicManager *)shareFetchLocalMusicManager;
 
 - (void)fetchLocalMusicFromiPod:(void (^)(NSMutableArray *musicArray, NSError *error))completion;
+
+- (void)importLocalMusicFromiPod:(NSURL *)musicURL importURL:(NSURL *)importURL completion:(void (^)(void))completion;
 
 @end

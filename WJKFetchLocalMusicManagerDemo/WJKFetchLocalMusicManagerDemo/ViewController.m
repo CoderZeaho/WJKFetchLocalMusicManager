@@ -17,8 +17,13 @@
 
 // view
 #import "TableViewCell.h"
+#import "WJKMaskLoadingView.h"
+
+#import "AppDelegate.h"
 
 static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLocalMusicCompleteCheckAuthorUserDefaultKey";
+
+#define TEMPWINDOW [(AppDelegate *)[UIApplication sharedApplication].delegate window]
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, WJKAudioPlayerDelegate>
 
@@ -29,6 +34,8 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSArray<NSArray *> *dataSource;
+
+@property (nonatomic, strong) WJKMaskLoadingView *progressView;
 
 @end
 
@@ -53,7 +60,7 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     self.importButton.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.frame), 50);
     [[self view] addSubview:[self importButton]];
     
-    self.tableView.frame = CGRectMake(0, CGRectGetHeight(self.importButton.frame) + 74, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    self.tableView.frame = CGRectMake(0, CGRectGetHeight(self.importButton.frame) + 74, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.importButton.frame) - 74);
     [[self tableView] registerClass:[TableViewCell class] forCellReuseIdentifier:NSStringFromClass([TableViewCell class])];
     [[self view] addSubview:[self tableView]];
     
@@ -63,6 +70,7 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
         //数据库没有创建好 暂时使用归档反归档本地化本地曲库
         NSString *musicArrayPath = [WJKCacheDirectory stringByAppendingPathComponent:@"localMusic.plist"];
         NSArray *musicArray = [NSKeyedUnarchiver unarchiveObjectWithFile:musicArrayPath];
+        [self _createLocalMusicResource:musicArray];
         if (musicArray.count > 0) {
             self.dataSource = @[musicArray];
         }
@@ -89,6 +97,10 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     // 创建缓存文件夹
     [self _createCacheDirectory];
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self _createLocalMusicResource:musicArray];
+    });
+    
     // 数据库没有创建好暂使用归档反归档本地化本地曲库
     NSString *musicArrayPath = [WJKCacheDirectory stringByAppendingPathComponent:@"localMusic.plist"];
     [NSKeyedArchiver archiveRootObject:sectionDataSource toFile:musicArrayPath];
@@ -102,6 +114,28 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     if (![fileManager fileExistsAtPath:WJKCacheDirectory]) {
         [fileManager createDirectoryAtPath:WJKCacheDirectory withIntermediateDirectories:YES attributes:nil error:NULL];
     }
+}
+
+- (void)_createLocalMusicResource:(NSArray *)musicArray
+{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    for (WJKLocalMusicModel *music in musicArray) {
+        NSString *folder = [[WJKCacheDirectory stringByAppendingPathComponent:@"LocalMusic"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", music.objectID]];
+        
+        NSString *file = [[folder stringByAppendingPathComponent:[NSString stringWithFormat:@"%@-%@", music.artist, music.title]] stringByAppendingPathExtension:[[music assetUrl] pathExtension]];
+        
+        // 若拷贝音乐已经存在 则执行下一条拷贝
+        if ([[NSFileManager defaultManager] fileExistsAtPath:folder]) {
+            break;
+        }
+        
+        [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:nil];
+        [[WJKFetchLocalMusicManager shareFetchLocalMusicManager] importLocalMusicFromiPod:[music assetUrl] importURL:[NSURL fileURLWithPath:file] completion:^{
+            dispatch_semaphore_signal(semaphore);
+        }];
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    }
+    
 }
 
 //判断是否授权访问媒体资源库
@@ -201,6 +235,12 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     return _audioPlayer;
 }
 
+- (WJKMaskLoadingView *)progressView {
+    if (!_progressView) {
+        _progressView = [[WJKMaskLoadingView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+    }
+    return _progressView;
+}
 
 #pragma mark - action
 - (void)didClickedImportMusicButton:(UIButton *)sender {
@@ -209,11 +249,19 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     
     //点击扫面再一次进行授权检查
     [self _requestAppleMusicAccessWithAuthorizedHandler:^{
+        
+        [[self progressView] showInView:TEMPWINDOW];
+        
         //导入iPod音乐
-        [self _fetchLocalMusicFromIPod];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [[self tableView] reloadData];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self _fetchLocalMusicFromIPod];
         });
+        
+        __weak typeof(self) wself = self;
+        self.progressView.reloadDataHandler = ^{
+            [[wself tableView] reloadData];
+        };
+        
     } unAuthorizedHandler:^{
         //第一次访问媒体资料库授权
         MPMediaPropertyPredicate *predicate = [MPMediaPropertyPredicate predicateWithValue:@(MPMediaTypeAnyAudio) forProperty:MPMediaItemPropertyMediaType];
@@ -232,7 +280,7 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
 }
 
 #pragma mark - WJKAudioPlayerDelegate
-- (void)playerWillStopMusic {
+- (void)audioPlayerWillStopMusic {
     [self _revertPlayingStatus];
 }
 

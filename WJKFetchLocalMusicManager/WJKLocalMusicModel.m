@@ -14,6 +14,7 @@ NSString *const kWJKLocalMusicModelArtist = @"artist";
 NSString *const kWJKLocalMusicModelAssetUrl = @"assetUrl";
 NSString *const kWJKLocalMusicModelAudio = @"audio";
 NSString *const kWJKLocalMusicModelFileName = @"fileName";
+NSString *const kWJKLocalMusicModelObjectID = @"id";
 NSString *const kWJKLocalMusicModelTitle = @"title";
 NSString *const kWJKLocalMusicModelTotalTime = @"totalTime";
 NSString *const kWJKLocalMusicModelTotalTimeFormat = @"totalTimeFormat";
@@ -37,6 +38,7 @@ NSString *const kWJKLocalMusicModelTotalTimeFormat = @"totalTimeFormat";
         self.audio = item;
         NSString *fileSuffix = @".mp3";
         self.fileName = [NSString stringWithFormat:@"%@%@", self.title, fileSuffix];
+        self.objectID = [item valueForProperty:MPMediaItemPropertyPersistentID];
         self.title = [item valueForProperty:MPMediaItemPropertyTitle];
         self.totalTime = [self getDurationOfAudioWithItem:item];
         self.totalTimeFormat = [self getFormatDurationOfAudioWithItem:item];
@@ -99,6 +101,9 @@ NSString *const kWJKLocalMusicModelTotalTimeFormat = @"totalTimeFormat";
 	if(self.fileName != nil){
 		[aCoder encodeObject:self.fileName forKey:kWJKLocalMusicModelFileName];
 	}
+    if(self.objectID != nil){
+        [aCoder encodeObject:self.objectID forKey:kWJKLocalMusicModelObjectID];
+    }
 	if(self.title != nil){
 		[aCoder encodeObject:self.title forKey:kWJKLocalMusicModelTitle];
 	}
@@ -123,6 +128,7 @@ NSString *const kWJKLocalMusicModelTotalTimeFormat = @"totalTimeFormat";
 	self.assetUrl = [aDecoder decodeObjectForKey:kWJKLocalMusicModelAssetUrl];
 	self.audio = [aDecoder decodeObjectForKey:kWJKLocalMusicModelAudio];
 	self.fileName = [aDecoder decodeObjectForKey:kWJKLocalMusicModelFileName];
+    self.objectID = [aDecoder decodeObjectForKey:kWJKLocalMusicModelObjectID];
 	self.title = [aDecoder decodeObjectForKey:kWJKLocalMusicModelTitle];
 	self.totalTime = [aDecoder decodeObjectForKey:kWJKLocalMusicModelTotalTime];
 	self.totalTimeFormat = [aDecoder decodeObjectForKey:kWJKLocalMusicModelTotalTimeFormat];
@@ -143,6 +149,7 @@ NSString *const kWJKLocalMusicModelTotalTimeFormat = @"totalTimeFormat";
 	copy.assetUrl = [self.assetUrl copy];
 	copy.audio = [self.audio copy];
 	copy.fileName = [self.fileName copy];
+    copy.objectID = [self.objectID copy];
 	copy.title = [self.title copy];
 	copy.totalTime = [self.totalTime copy];
 	copy.totalTimeFormat = [self.totalTimeFormat copy];

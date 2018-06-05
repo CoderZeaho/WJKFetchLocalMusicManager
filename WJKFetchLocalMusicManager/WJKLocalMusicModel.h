@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSURL * assetUrl;
 @property (nonatomic, strong) MPMediaItem * audio;
 @property (nonatomic, copy) NSString * fileName;
+@property (nonatomic, copy) NSString * objectID;  
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSNumber * totalTime;
 @property (nonatomic, strong) NSString * totalTimeFormat;
