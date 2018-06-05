@@ -1,5 +1,5 @@
 //
-//  WJKLocalMusicModel.h
+//	WJKLocalMusicModel.h
 //  WJKFetchLocalMusicManagerDemo
 //
 //  Created by Zeaho on 2018/2/10.
@@ -12,15 +12,15 @@
 
 @interface WJKLocalMusicModel : NSObject
 
-@property (strong, nonatomic) MPMediaItem        *audio;
-@property (strong, nonatomic) NSURL              *assetUrl;
-@property (strong, nonatomic) NSString           *title;
-@property (strong, nonatomic) NSString           *artist;
-@property (strong, nonatomic) NSString           *albumTitle;
-@property (strong, nonatomic) UIImage            *albumThumb;
-@property (strong, nonatomic) NSString           *fileName;
-@property (strong, nonatomic) NSNumber           *totalTime;
-@property (strong, nonatomic) NSString           *totalTimeFormat;
+@property (nonatomic, strong) UIImage * albumThumb;
+@property (nonatomic, copy) NSString * albumTitle;
+@property (nonatomic, copy) NSString * artist;
+@property (nonatomic, strong) NSURL * assetUrl;
+@property (nonatomic, strong) MPMediaItem * audio;
+@property (nonatomic, copy) NSString * fileName;
+@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong) NSNumber * totalTime;
+@property (nonatomic, strong) NSString * totalTimeFormat;
 
 - (instancetype)initWithMPMediaItem:(MPMediaItem *)item;
 

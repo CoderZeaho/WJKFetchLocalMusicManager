@@ -12,6 +12,9 @@
 #import "WJKFetchLocalMusicManager.h"
 #import "WJKAudioPlayer.h"
 
+// macro
+#import "FileMacro.h"
+
 // view
 #import "TableViewCell.h"
 
@@ -58,9 +61,8 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     //默认进入进行授权检查
     [self _requestAppleMusicAccessWithAuthorizedHandler:^{
         //数据库没有创建好 暂时使用归档反归档本地化本地曲库
-        NSString *docPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).lastObject;
-        NSString *musicArrPath = [docPath stringByAppendingString:@"/localMusic.plist"];
-        NSArray *musicArray = [NSKeyedUnarchiver unarchiveObjectWithFile:musicArrPath];
+        NSString *musicArrayPath = [WJKCacheDirectory stringByAppendingPathComponent:@"localMusic.plist"];
+        NSArray *musicArray = [NSKeyedUnarchiver unarchiveObjectWithFile:musicArrayPath];
         if (musicArray.count > 0) {
             self.dataSource = @[musicArray];
         }
@@ -84,12 +86,22 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
     
     NSMutableArray *sectionDataSource = [NSMutableArray arrayWithArray:musicArray];
     
-    //数据库没有创建好暂时使用归档反归档本地化本地曲库
-    NSString *docPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).lastObject;
-    NSString *musicArrPath = [docPath stringByAppendingString:@"/localMusic.plist"];
-    [NSKeyedArchiver archiveRootObject:sectionDataSource toFile:musicArrPath];
-    NSLog(@"musicArrayPath:%@", musicArrPath);
+    // 创建缓存文件夹
+    [self _createCacheDirectory];
+    
+    // 数据库没有创建好暂使用归档反归档本地化本地曲库
+    NSString *musicArrayPath = [WJKCacheDirectory stringByAppendingPathComponent:@"localMusic.plist"];
+    [NSKeyedArchiver archiveRootObject:sectionDataSource toFile:musicArrayPath];
+    NSLog(@"localMusicArrayPath: %@", musicArrayPath);
+    
     self.dataSource = @[sectionDataSource];
+}
+
+- (void)_createCacheDirectory {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:WJKCacheDirectory]) {
+        [fileManager createDirectoryAtPath:WJKCacheDirectory withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
 }
 
 //判断是否授权访问媒体资源库
@@ -226,7 +238,6 @@ static NSString *const WJKLocalMusicCompleteCheckAuthorUserDefaultKey = @"WJKLoc
 
 #pragma mark - tableView delegate && dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

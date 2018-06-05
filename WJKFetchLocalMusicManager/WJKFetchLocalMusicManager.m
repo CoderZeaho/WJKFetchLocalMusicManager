@@ -12,8 +12,6 @@ static WJKFetchLocalMusicManager *shareFetchMusicManager = nil;
 
 @interface WJKFetchLocalMusicManager ()
 
-@property (nonatomic, strong) AVAssetExportSession *exportSessionMusic;
-
 @end
 
 @implementation WJKFetchLocalMusicManager

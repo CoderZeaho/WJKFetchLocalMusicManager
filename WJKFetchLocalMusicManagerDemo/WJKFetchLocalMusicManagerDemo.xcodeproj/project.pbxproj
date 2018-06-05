@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA0AA081202ED2BC008E98AE /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA080202ED2BC008E98AE /* TableViewCell.m */; };
 		FA0AA085202ED314008E98AE /* WJKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */; };
-		FA0AA08B2031D884008E98AE /* WJKLocalMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA0892031D884008E98AE /* WJKLocalMusicModel.m */; };
 		FA0AA08C2031D884008E98AE /* WJKFetchLocalMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA08A2031D884008E98AE /* WJKFetchLocalMusicManager.m */; };
+		FA843E4720C63DDD00EB6A27 /* WJKLocalMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA843E4620C63DDD00EB6A27 /* WJKLocalMusicModel.m */; };
 		FACF6017202E93DF00AB41DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6016202E93DF00AB41DC /* AppDelegate.m */; };
 		FACF601A202E93DF00AB41DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF6019202E93DF00AB41DC /* ViewController.m */; };
 		FACF601D202E93DF00AB41DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF601B202E93DF00AB41DC /* Main.storyboard */; };
@@ -41,10 +41,11 @@
 		FA0AA080202ED2BC008E98AE /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		FA0AA083202ED314008E98AE /* WJKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKAudioPlayer.m; sourceTree = "<group>"; };
 		FA0AA084202ED314008E98AE /* WJKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKAudioPlayer.h; sourceTree = "<group>"; };
-		FA0AA0872031D884008E98AE /* WJKLocalMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKLocalMusicModel.h; sourceTree = "<group>"; };
 		FA0AA0882031D884008E98AE /* WJKFetchLocalMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKFetchLocalMusicManager.h; sourceTree = "<group>"; };
-		FA0AA0892031D884008E98AE /* WJKLocalMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKLocalMusicModel.m; sourceTree = "<group>"; };
 		FA0AA08A2031D884008E98AE /* WJKFetchLocalMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKFetchLocalMusicManager.m; sourceTree = "<group>"; };
+		FA843E4420C6348A00EB6A27 /* FileMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMacro.h; sourceTree = "<group>"; };
+		FA843E4520C63DDD00EB6A27 /* WJKLocalMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJKLocalMusicModel.h; sourceTree = "<group>"; };
+		FA843E4620C63DDD00EB6A27 /* WJKLocalMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJKLocalMusicModel.m; sourceTree = "<group>"; };
 		FACF6012202E93DF00AB41DC /* WJKFetchLocalMusicManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJKFetchLocalMusicManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF6015202E93DF00AB41DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FACF6016202E93DF00AB41DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,9 +97,9 @@
 		FA0AA0862031D884008E98AE /* WJKFetchLocalMusicManager */ = {
 			isa = PBXGroup;
 			children = (
-				FA0AA0872031D884008E98AE /* WJKLocalMusicModel.h */,
+				FA843E4520C63DDD00EB6A27 /* WJKLocalMusicModel.h */,
+				FA843E4620C63DDD00EB6A27 /* WJKLocalMusicModel.m */,
 				FA0AA0882031D884008E98AE /* WJKFetchLocalMusicManager.h */,
-				FA0AA0892031D884008E98AE /* WJKLocalMusicModel.m */,
 				FA0AA08A2031D884008E98AE /* WJKFetchLocalMusicManager.m */,
 			);
 			name = WJKFetchLocalMusicManager;
@@ -134,6 +135,7 @@
 				FACF6019202E93DF00AB41DC /* ViewController.m */,
 				FA0AA07F202ED2BC008E98AE /* TableViewCell.h */,
 				FA0AA080202ED2BC008E98AE /* TableViewCell.m */,
+				FA843E4420C6348A00EB6A27 /* FileMacro.h */,
 				FACF6047202E940A00AB41DC /* Launch Screen.storyboard */,
 				FACF601B202E93DF00AB41DC /* Main.storyboard */,
 				FACF601E202E93DF00AB41DC /* Assets.xcassets */,
@@ -277,11 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACF601A202E93DF00AB41DC /* ViewController.m in Sources */,
+				FA843E4720C63DDD00EB6A27 /* WJKLocalMusicModel.m in Sources */,
 				FA0AA081202ED2BC008E98AE /* TableViewCell.m in Sources */,
 				FA0AA085202ED314008E98AE /* WJKAudioPlayer.m in Sources */,
 				FACF6025202E93DF00AB41DC /* main.m in Sources */,
 				FA0AA08C2031D884008E98AE /* WJKFetchLocalMusicManager.m in Sources */,
-				FA0AA08B2031D884008E98AE /* WJKLocalMusicModel.m in Sources */,
 				FACF6017202E93DF00AB41DC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
